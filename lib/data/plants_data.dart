@@ -39,7 +39,8 @@ List<Map<String, dynamic>> plantsData = [
     "light": 60,
     "fertilizer": 2,
     "rating": 4.8,
-    "color": "0xffE5F0A1"
+    "color": "0xffE5F0A1",
+    "quantity": 0
   },
   {
     "name": "Croton Petra",
@@ -53,7 +54,8 @@ List<Map<String, dynamic>> plantsData = [
     "light": 90,
     "fertilizer": 6,
     "rating": 4.3,
-    "color": "0xffABE8D3"
+    "color": "0xffABE8D3",
+    "quantity": 0
   },
   {
     "name": "Bird's Nest Fern",
@@ -67,7 +69,8 @@ List<Map<String, dynamic>> plantsData = [
     "light": 75,
     "fertilizer": 4,
     "rating": 4.6,
-    "color": "0xffC1E8A4"
+    "color": "0xffC1E8A4",
+    "quantity": 0
   },
   {
     "name": "Aloe Vera",
@@ -81,6 +84,7 @@ List<Map<String, dynamic>> plantsData = [
     "light": 85,
     "fertilizer": 3,
     "rating": 4.2,
-    "color": "0xffF5EDA8"
+    "color": "0xffF5EDA8",
+    "quantity": 0
   }
 ];

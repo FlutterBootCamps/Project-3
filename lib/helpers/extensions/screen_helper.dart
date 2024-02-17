@@ -8,4 +8,8 @@ extension Screen on BuildContext{
   double getHeight(BuildContext context){
     return MediaQuery.of(context).size.height;
   }
+
+  push(BuildContext context, Widget screen){
+    return Navigator.push(context, MaterialPageRoute(builder: (route) => screen));
+  }
 }

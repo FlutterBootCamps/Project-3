@@ -83,4 +83,15 @@ class HomeData {
       }),
     ];
   }
+  List<Widget> getAllButViewedPlant(Plant plant){
+    List<Widget> cleanList = [];
+    for (var element in plantsData){
+      Plant currentPlant = Plant.fromJson(element);
+
+      if (currentPlant.name != plant.name){
+        cleanList.add(PlantCard(plant: currentPlant, isMini: true,));
+      }
+    }
+    return cleanList;
+  }
 }

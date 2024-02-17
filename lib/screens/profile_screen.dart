@@ -23,8 +23,11 @@ class ProfileScreen extends StatelessWidget {
               letterSpacing: 2.5),
         ),
         actions: [
-          IconButton(
-              onPressed: () {}, icon: Image.asset("assets/icons/menu.png"))
+          Padding(
+            padding: const EdgeInsets.only(right: 28),
+            child: IconButton(
+                onPressed: () {}, icon: Image.asset("assets/icons/menu.png")),
+          )
         ],
       ),
       body: Padding(

@@ -11,6 +11,7 @@ class Plant {
     required this.fertilizer,
     required this.rating,
     required this.color,
+    required this.quantity,
   });
   late final String name;
   late final double price;
@@ -23,6 +24,7 @@ class Plant {
   late final int fertilizer;
   late final double rating;
   late final String color;
+  late final int quantity;
   
   factory Plant.fromJson(Map<String, dynamic> json){
     return Plant(
@@ -37,6 +39,7 @@ class Plant {
     fertilizer: json['fertilizer'],
     rating: json['rating'],
     color: json['color'],
+    quantity: json['quantity']
     );
   }
 
@@ -53,6 +56,7 @@ class Plant {
     _data['fertilizer'] = fertilizer;
     _data['rating'] = rating;
     _data['color'] = color;
+    _data['quantity'] = quantity;
     return _data;
   }
 }
