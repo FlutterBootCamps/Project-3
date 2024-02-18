@@ -1,4 +1,11 @@
 # Flutter Plants E-Commerce App
+all plants:
+![home](https://github.com/FlutterBootCamps/Project-3/assets/124809082/0e056c2c-ef49-45d6-9cfb-4af1c423c8f0)
+Indoor plants:
+![home_indoor](https://github.com/FlutterBootCamps/Project-3/assets/124809082/a95d0cb0-01ea-406e-8e75-5d526cac140e)
+
+Outdoor plants:
+![home_outdoor](https://github.com/FlutterBootCamps/Project-3/assets/124809082/7e12fa67-d0a6-4322-aa5b-15516b015d61)
 
 ## Overview
 
