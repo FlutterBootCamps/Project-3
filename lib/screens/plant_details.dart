@@ -1,10 +1,9 @@
-import 'dart:ui';
-
 import 'package:flutter/material.dart';
 import 'package:get_it/get_it.dart';
 import 'package:plantify/data%20layer/home_data.dart';
 import 'package:plantify/helpers/extensions/screen_helper.dart';
 import 'package:plantify/models/Plant_model.dart';
+import 'package:plantify/screens/basket_screen.dart';
 import 'package:plantify/utils/colors.dart';
 import 'package:plantify/widgets/checkout_bar.dart';
 import 'package:plantify/widgets/icon_indicator.dart';
@@ -59,10 +58,20 @@ class _PlantDetailsScreenState extends State<PlantDetailsScreen> {
           )
         ],
       ),
-      bottomNavigationBar: const CheckoutBar(
-        totalPrice: 1090,
+      bottomNavigationBar: CheckoutBar(
+        onTap: () {
+          context
+              .push(
+            context,
+            const BasketScreen(),
+          )
+              .then((_) {
+            setState(() {});
+          });
+        },
+        totalPrice: GetIt.I.get<HomeData>().getTotalPrice(),
         isEnabled: true,
-        noOfPlants: 3,
+        noOfPlants: GetIt.I.get<HomeData>().basketPlants.length,
       ),
       body: ListView(
         children: [
@@ -139,8 +148,15 @@ class _PlantDetailsScreenState extends State<PlantDetailsScreen> {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       RoundyButton(
-                        onTap: () {},
-                        notifyParent: () {},
+                        onTap: () {
+                          ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+                            content: Text(GetIt.I
+                                .get<HomeData>()
+                                .addToBasket(widget.plant)),
+                            backgroundColor: designColors[2],
+                          ));
+                        },
+                        notifyParent: refresh,
                         icon: "assets/images/smiley.png",
                         color: designColors[2],
                         boxShadow: [
@@ -301,4 +317,3 @@ class _PlantDetailsScreenState extends State<PlantDetailsScreen> {
     );
   }
 }
-

@@ -10,7 +10,8 @@ import 'package:plantify/widgets/roundy_button.dart';
 class PlantCard extends StatefulWidget {
   const PlantCard({
     super.key,
-    required this.plant, this.isMini = false,
+    required this.plant,
+    this.isMini = false,
   });
 
   final Plant plant;
@@ -27,16 +28,19 @@ class _PlantCardState extends State<PlantCard> {
       clipBehavior: Clip.none,
       children: [
         InkWell(
-          onTap: (){
-            context.push(context, PlantDetailsScreen(plant: widget.plant)).then((_) {
-              setState(() {
-              });
-            }); 
+          onTap: () {
+            context
+                .push(context, PlantDetailsScreen(plant: widget.plant))
+                .then((_) {
+              setState(() {});
+            });
           },
           child: Container(
             width: (widget.isMini!) ? 155 : 277,
             height: (widget.isMini!) ? 114 : 174,
-            padding: (widget.isMini!) ? const EdgeInsets.only(left: 24, top: 10, bottom: 7) : const EdgeInsets.only(left: 23, bottom: 10, top: 42),
+            padding: (widget.isMini!)
+                ? const EdgeInsets.only(left: 24, top: 10, bottom: 7)
+                : const EdgeInsets.only(left: 23, bottom: 10, top: 42),
             decoration: BoxDecoration(
               color: Color(int.parse(widget.plant.color)),
               borderRadius: const BorderRadius.all(Radius.circular(18)),
@@ -57,7 +61,10 @@ class _PlantCardState extends State<PlantCard> {
                             fontWeight: FontWeight.w600,
                             fontSize: 14),
                       ),
-                      Image.asset("assets/images/paw.png", scale: (widget.isMini!) ? 1.5 : null,)
+                      Image.asset(
+                        "assets/images/paw.png",
+                        scale: (widget.isMini!) ? 1.5 : null,
+                      )
                     ],
                   ),
                 ),
@@ -93,7 +100,9 @@ class _PlantCardState extends State<PlantCard> {
                                   .get<HomeData>()
                                   .removeFromFavorite(widget.plant);
                             } else {
-                              GetIt.I.get<HomeData>().addToFavorite(widget.plant);
+                              GetIt.I
+                                  .get<HomeData>()
+                                  .addToFavorite(widget.plant);
                             }
                             setState(() {});
                           },
@@ -102,8 +111,22 @@ class _PlantCardState extends State<PlantCard> {
                                   .checkInFavorite(widget.plant)
                               ? "assets/icons/heart_filled.png"
                               : "assets/icons/heart_empty.png")),
-                      (widget.isMini!) ? const SizedBox() : RoundyButton(
-                        icon: "assets/images/smiley.png", color: designColors[2], onTap: (){}, notifyParent: (){},),
+                      (widget.isMini!)
+                          ? const SizedBox()
+                          : RoundyButton(
+                              icon: "assets/images/smiley.png",
+                              color: designColors[2],
+                              onTap: () {
+                                ScaffoldMessenger.of(context)
+                                    .showSnackBar(SnackBar(
+                                  content: Text(GetIt.I
+                                      .get<HomeData>()
+                                      .addToBasket(widget.plant)),
+                                  backgroundColor: designColors[2],
+                                ));
+                              },
+                              notifyParent: () {},
+                            ),
                     ],
                   ),
                 )
@@ -116,7 +139,8 @@ class _PlantCardState extends State<PlantCard> {
             left: (widget.isMini!) ? 110 : 200,
             child: Image.asset(
               widget.plant.imagePath,
-            scale: (widget.isMini!) ? 2 : null,))
+              scale: (widget.isMini!) ? 2 : null,
+            ))
       ],
     );
   }

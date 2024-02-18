@@ -1,18 +1,19 @@
 import 'package:flutter/material.dart';
 import 'package:plantify/helpers/extensions/screen_helper.dart';
-import 'package:plantify/screens/basket_screen.dart';
 import 'package:plantify/utils/colors.dart';
 
 class CheckoutBar extends StatefulWidget {
   const CheckoutBar({
     super.key,
-    required this.noOfPlants,
+    this.noOfPlants,
     required this.totalPrice,
     required this.isEnabled,
+    required this.onTap,
   });
-  final int noOfPlants;
-  final double totalPrice;
+  final int? noOfPlants;
+  final int totalPrice;
   final bool isEnabled;
+  final Function()? onTap;
 
   @override
   State<CheckoutBar> createState() => _CheckoutBarState();
@@ -22,17 +23,7 @@ class _CheckoutBarState extends State<CheckoutBar> {
   @override
   Widget build(BuildContext context) {
     return InkWell(
-      onTap: (widget.isEnabled)
-          ? () {
-              context.push(
-                context,
-                const BasketScreen(),
-              ).then((_) {
-                setState(() {
-                });
-              });
-            }
-          : null,
+      onTap: (widget.isEnabled) ? widget.onTap : null,
       child: Container(
         width: context.getWidth(context),
         height: 56,

@@ -3,7 +3,9 @@ import 'package:plantify/utils/colors.dart';
 
 class IconIndicator extends StatelessWidget {
   const IconIndicator({
-    super.key, required this.icon, required this.indicatorValue,
+    super.key,
+    required this.icon,
+    required this.indicatorValue,
   });
   final String icon;
   final double indicatorValue;
@@ -14,15 +16,23 @@ class IconIndicator extends StatelessWidget {
       width: 72,
       height: 26,
       padding: const EdgeInsets.symmetric(horizontal: 14.5),
-      decoration: BoxDecoration(color: designColors[1], borderRadius: const BorderRadius.all(Radius.circular(12))),
+      decoration: BoxDecoration(
+          color: designColors[1],
+          borderRadius: const BorderRadius.all(Radius.circular(12))),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: [
           Image.asset(icon),
-          Text(indicatorValue.toString(), style: TextStyle(color: designColors[2], fontFamily: "Poppins", fontSize: 12, fontWeight: FontWeight.w600),)
+          Text(
+            indicatorValue.toString(),
+            style: TextStyle(
+                color: designColors[2],
+                fontFamily: "Poppins",
+                fontSize: 12,
+                fontWeight: FontWeight.w600),
+          )
         ],
       ),
     );
   }
 }
-

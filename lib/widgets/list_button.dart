@@ -13,23 +13,22 @@ class ListButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-    padding: const EdgeInsets.only(
-      bottom: 3,
-    ),
-    decoration: BoxDecoration(
-        border: Border(
-            bottom: BorderSide(
-      color: (isActive) ? designColors[2] : designColors[4],
-      width: 2
-    ))),
-    child: Text(
-      text,
-      style: TextStyle(
-        color: (isActive) ? designColors[2] : designColors[6],
-        fontWeight: (isActive) ? FontWeight.bold : FontWeight.normal,
-        fontSize: 14,
+      padding: const EdgeInsets.only(
+        bottom: 3,
       ),
-    ),
-          );
+      decoration: BoxDecoration(
+          border: Border(
+              bottom: BorderSide(
+                  color: (isActive) ? designColors[2] : designColors[4],
+                  width: 2))),
+      child: Text(
+        text,
+        style: TextStyle(
+          color: (isActive) ? designColors[2] : designColors[6],
+          fontWeight: (isActive) ? FontWeight.bold : FontWeight.normal,
+          fontSize: 14,
+        ),
+      ),
+    );
   }
 }

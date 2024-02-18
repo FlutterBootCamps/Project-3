@@ -8,15 +8,22 @@ import 'package:plantify/widgets/ad_banner.dart';
 import 'package:plantify/widgets/home_tab_controller.dart';
 import 'package:plantify/widgets/icon_button_container.dart';
 import 'package:plantify/widgets/text_bar.dart';
+import 'package:shimmer/shimmer.dart';
 
+// ignore: must_be_immutable
 class HomeScreen extends StatefulWidget {
-  const HomeScreen({super.key});
+  HomeScreen({super.key});
+  TextEditingController searchController = TextEditingController();
 
   @override
   State<HomeScreen> createState() => _HomeScreenState();
 }
 
 class _HomeScreenState extends State<HomeScreen> {
+  void refresh() {
+    setState(() {});
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -36,14 +43,19 @@ class _HomeScreenState extends State<HomeScreen> {
               letterSpacing: 2.5),
         ),
         actions: [
-          badges.Badge(
-              badgeStyle: badges.BadgeStyle(badgeColor: designColors[2]),
-              position: badges.BadgePosition.custom(bottom: 13, end: 12),
-              badgeContent: const Text(""),
-              showBadge: true,
-              child: IconButton(
-                  onPressed: () {},
-                  icon: Image.asset("assets/icons/bell.png"))),
+          Shimmer.fromColors(
+            highlightColor: designColors[1],
+            enabled: true,
+            baseColor: designColors[2],
+            child: badges.Badge(
+                badgeStyle: badges.BadgeStyle(badgeColor: designColors[2]),
+                position: badges.BadgePosition.custom(bottom: 13, end: 12),
+                badgeContent: const Text(""),
+                showBadge: true,
+                child: IconButton(
+                    onPressed: () {},
+                    icon: Image.asset("assets/icons/bell.png"))),
+          ),
           IconButton(
               onPressed: () {}, icon: Image.asset("assets/icons/menu.png"))
         ],
@@ -61,15 +73,23 @@ class _HomeScreenState extends State<HomeScreen> {
             const SizedBox(
               height: 24,
             ),
-            const Row(
+            Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 TextBar(
+                  controller: widget.searchController,
                   labelText: "Search",
                   hintText: "Enter a plant's name",
                   icon: "assets/icons/search.png",
+                  onTap: () {
+                    if (widget.searchController.text.trim() != "") {
+                      GetIt.I.get<HomeData>().isSearching = true;
+                    }
+                  },
+                  notifyParent: refresh,
                 ),
-                IconButtonContainer(icon: "assets/icons/filter_settings.png")
+                const IconButtonContainer(
+                    icon: "assets/icons/filter_settings.png")
               ],
             ),
             const SizedBox(
@@ -91,6 +111,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   ),
                 ],
                 onTap: (index) {
+                  GetIt.I.get<HomeData>().isSearching = false;
                   GetIt.I.get<HomeData>().plantFilterIndex = index;
                   setState(() {});
                 },
@@ -99,21 +120,17 @@ class _HomeScreenState extends State<HomeScreen> {
             const SizedBox(
               height: 35,
             ),
-            SizedBox(
-              height: context.getHeight(context) * 2.2,
-              child: Column(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: GetIt.I.get<HomeData>().getallPlants()
-                  ),
-            ),
-            const SizedBox(height: 45,)
+            (GetIt.I.get<HomeData>().isSearching)
+                ? GetIt.I
+                    .get<HomeData>()
+                    .getSearchCriteria(widget.searchController.text)
+                : GetIt.I.get<HomeData>().getPlantFilterResults(),
+            const SizedBox(
+              height: 45,
+            )
           ],
         ),
       ),
     );
   }
 }
-
-
-

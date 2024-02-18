@@ -7,7 +7,10 @@ class RoundyButton extends StatefulWidget {
     required this.color,
     required this.onTap,
     this.boxShadow,
-    this.border, this.width = 54, this.height = 54, required this.notifyParent,
+    this.border,
+    this.width = 54,
+    this.height = 54,
+    required this.notifyParent,
   });
 
   final String icon;
@@ -27,7 +30,7 @@ class _RoundyButtonState extends State<RoundyButton> {
   @override
   Widget build(BuildContext context) {
     return InkWell(
-      onTap: (){
+      onTap: () {
         widget.onTap();
         widget.notifyParent();
       },

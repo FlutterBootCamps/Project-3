@@ -11,7 +11,9 @@ List<Map<String, dynamic>> plantsData = [
     "light": 80,
     "fertilizer": 5,
     "rating": 4.5,
-    "color": "0xffFFF3CC"
+    "color": "0xffFFF3CC",
+    "quantity": 1,
+    "isSaved": false
   },
   {
     "name": "Peperomia Obtusfolia",
@@ -25,7 +27,9 @@ List<Map<String, dynamic>> plantsData = [
     "light": 70,
     "fertilizer": 3,
     "rating": 4.0,
-    "color": "0xffB0EAD5"
+    "color": "0xffB0EAD5",
+    "quantity": 1,
+    "isSaved": false
   },
   {
     "name": "Cactus",
@@ -40,7 +44,8 @@ List<Map<String, dynamic>> plantsData = [
     "fertilizer": 2,
     "rating": 4.8,
     "color": "0xffE5F0A1",
-    "quantity": 0
+    "quantity": 1,
+    "isSaved": false
   },
   {
     "name": "Croton Petra",
@@ -55,7 +60,8 @@ List<Map<String, dynamic>> plantsData = [
     "fertilizer": 6,
     "rating": 4.3,
     "color": "0xffABE8D3",
-    "quantity": 0
+    "quantity": 1,
+    "isSaved": false
   },
   {
     "name": "Bird's Nest Fern",
@@ -70,7 +76,8 @@ List<Map<String, dynamic>> plantsData = [
     "fertilizer": 4,
     "rating": 4.6,
     "color": "0xffC1E8A4",
-    "quantity": 0
+    "quantity": 1,
+    "isSaved": false
   },
   {
     "name": "Aloe Vera",
@@ -85,6 +92,7 @@ List<Map<String, dynamic>> plantsData = [
     "fertilizer": 3,
     "rating": 4.2,
     "color": "0xffF5EDA8",
-    "quantity": 0
+    "quantity": 1,
+    "isSaved": false
   }
 ];

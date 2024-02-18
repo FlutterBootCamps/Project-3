@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:plantify/utils/colors.dart';
 
-class TextHeader extends StatelessWidget {
-  const TextHeader({
+class ScreenHeader extends StatelessWidget {
+  const ScreenHeader({
     super.key,
     required this.text,
   });
@@ -13,9 +13,9 @@ class TextHeader extends StatelessWidget {
     return Text(
       text,
       style: TextStyle(
-          color: designColors[6],
+          color: designColors[2],
           fontFamily: "Poppins",
-          fontSize: 14,
+          fontSize: 32,
           fontWeight: FontWeight.bold),
     );
   }

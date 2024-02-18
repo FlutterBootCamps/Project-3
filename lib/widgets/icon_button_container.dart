@@ -12,6 +12,7 @@ class IconButtonContainer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return InkWell(
+      onTap: () {},
       child: Container(
         width: 42,
         height: 46,

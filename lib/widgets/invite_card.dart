@@ -4,7 +4,10 @@ import 'package:plantify/utils/colors.dart';
 
 class InviteCard extends StatelessWidget {
   const InviteCard({
-    super.key, required this.headerText, required this.descriptionText, required this.buttonText,
+    super.key,
+    required this.headerText,
+    required this.descriptionText,
+    required this.buttonText,
   });
   final String headerText;
   final String descriptionText;
@@ -15,8 +18,7 @@ class InviteCard extends StatelessWidget {
     return Container(
       width: context.getWidth(context) * 0.9,
       height: 145,
-      padding: const EdgeInsets.symmetric(
-          horizontal: 23, vertical: 14),
+      padding: const EdgeInsets.symmetric(horizontal: 23, vertical: 14),
       decoration: BoxDecoration(
           image: const DecorationImage(
               alignment: Alignment.centerLeft,
@@ -24,8 +26,7 @@ class InviteCard extends StatelessWidget {
                 "assets/images/invite_card_background.png",
               )),
           color: designColors[7],
-          borderRadius:
-              const BorderRadius.all(Radius.circular(24))),
+          borderRadius: const BorderRadius.all(Radius.circular(24))),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -54,7 +55,15 @@ class InviteCard extends StatelessWidget {
                         color: designColors[2]),
                   )),
               TextButton(
-                style: ButtonStyle(backgroundColor: MaterialStatePropertyAll(designColors[2]), shape: const MaterialStatePropertyAll(RoundedRectangleBorder(borderRadius: BorderRadius.all(Radius.circular(4)))), minimumSize: const MaterialStatePropertyAll(Size(60, 30))),
+                  style: ButtonStyle(
+                      backgroundColor:
+                          MaterialStatePropertyAll(designColors[2]),
+                      shape: const MaterialStatePropertyAll(
+                          RoundedRectangleBorder(
+                              borderRadius:
+                                  BorderRadius.all(Radius.circular(4)))),
+                      minimumSize:
+                          const MaterialStatePropertyAll(Size(60, 30))),
                   onPressed: () {},
                   child: Text(
                     buttonText,

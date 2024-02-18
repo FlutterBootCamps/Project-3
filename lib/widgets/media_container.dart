@@ -4,7 +4,10 @@ import 'package:plantify/widgets/roundy_button.dart';
 
 class MediaContainer extends StatelessWidget {
   const MediaContainer({
-    super.key, required this.media, this.isVideo = false, this.onTap,
+    super.key,
+    required this.media,
+    this.isVideo = false,
+    this.onTap,
   });
   final String media;
   final bool? isVideo;
@@ -17,10 +20,25 @@ class MediaContainer extends StatelessWidget {
       child: Container(
         width: (isVideo!) ? 134 : 104,
         height: 90,
-        decoration: BoxDecoration(borderRadius: const BorderRadius.all(Radius.circular(14)), image: DecorationImage(image: AssetImage(media), fit: BoxFit.cover),),
-        child: (isVideo!) ? Center(child: RoundyButton(
-          notifyParent: (){},
-          onTap: (){}, icon: "assets/icons/play.png", color: designColors[16], border: Border.all(color: designColors[1], width: 2,), width: 48, height: 48,)) : null,
+        decoration: BoxDecoration(
+          borderRadius: const BorderRadius.all(Radius.circular(14)),
+          image: DecorationImage(image: AssetImage(media), fit: BoxFit.cover),
+        ),
+        child: (isVideo!)
+            ? Center(
+                child: RoundyButton(
+                notifyParent: () {},
+                onTap: () {},
+                icon: "assets/icons/play.png",
+                color: designColors[16],
+                border: Border.all(
+                  color: designColors[1],
+                  width: 2,
+                ),
+                width: 48,
+                height: 48,
+              ))
+            : null,
       ),
     );
   }

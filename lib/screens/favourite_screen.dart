@@ -4,6 +4,7 @@ import 'package:plantify/data%20layer/home_data.dart';
 import 'package:plantify/models/Plant_model.dart';
 import 'package:plantify/utils/colors.dart';
 import 'package:plantify/widgets/favorite_plant_container.dart';
+import 'package:plantify/widgets/screen_header.dart';
 
 // ignore: must_be_immutable
 class FavouriteScreen extends StatefulWidget {
@@ -49,24 +50,25 @@ class _FavouriteScreenState extends State<FavouriteScreen> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text(
-              "Favorite",
-              style: TextStyle(
-                  color: designColors[2],
-                  fontFamily: "Poppins",
-                  fontSize: 32,
-                  fontWeight: FontWeight.bold),
-            ),
+            const ScreenHeader(text: "Favorite"),
             const SizedBox(
               height: 34.7,
             ),
             (GetIt.I.get<HomeData>().favoritePlants.isEmpty)
                 ? Center(
-                    child: Text("You currently have no plants in your favourite list.", style: TextStyle(color: designColors[6], fontFamily: "Poppins", fontSize: 14, fontWeight: FontWeight.w600),),
+                    child: Text(
+                      "You currently have no plants in your favourite list.",
+                      style: TextStyle(
+                          color: designColors[6],
+                          fontFamily: "Poppins",
+                          fontSize: 14,
+                          fontWeight: FontWeight.w600),
+                    ),
                   )
                 : SizedBox(
                     height: 560,
                     child: ListView(
+                      clipBehavior: Clip.none,
                       children: List.generate(
                           GetIt.I.get<HomeData>().favoritePlants.length,
                           (index) {

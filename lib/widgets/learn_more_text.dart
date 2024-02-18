@@ -4,7 +4,9 @@ import 'package:plantify/utils/colors.dart';
 
 class LearnMoreText extends StatelessWidget {
   const LearnMoreText({
-    super.key, required this.text, this.recognizer,
+    super.key,
+    required this.text,
+    this.recognizer,
   });
   final String text;
   final GestureRecognizer? recognizer;
@@ -21,8 +23,7 @@ class LearnMoreText extends StatelessWidget {
                 fontSize: 13,
                 fontWeight: FontWeight.w500,
                 color: designColors[8]),
-            text:
-                text,
+            text: text,
             children: [
               TextSpan(
                   recognizer: recognizer,

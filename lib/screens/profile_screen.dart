@@ -43,12 +43,14 @@ class ProfileScreen extends StatelessWidget {
                   fontWeight: FontWeight.bold,
                   color: designColors[2]),
             ),
-            Text("SoqatiMohammed@hotmail.com", style: TextStyle(
+            Text(
+              "SoqatiMohammed@hotmail.com",
+              style: TextStyle(
                   fontFamily: "Poppins",
                   fontSize: 12,
                   fontWeight: FontWeight.bold,
-                  color: designColors[11]),),
-
+                  color: designColors[11]),
+            ),
           ],
         ),
       ),
