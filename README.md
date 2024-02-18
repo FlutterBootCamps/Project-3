@@ -2,56 +2,45 @@
 
 ## Overview
 
-Welcome to the Flutter Plants E-Commerce project! In this project, you will create a visually appealing user interface for a plants e-commerce application using Flutter. You'll apply various concepts including dealing with JSON data, creating models, retrieving information, using packages, implementing CRUD functionality, and following clean code principles.
+The Flutter Plants E-Commerce project aims to develop a visually appealing user interface for a plant-based e-commerce application using Flutter. It involves handling JSON data, creating models, utilizing packages, implementing CRUD functionality, and adhering to clean code principles.
 
-## Requirements
+## Screenshots
 
-1. **UI Implementation:**
-    - Implement the user interface based on the provided Figma design for a plants e-commerce application.
-    - Utilize custom widgets for code reusability and maintainability.
-    - Ensure responsive design across different screen sizes.
+### Home Screen
+![Home Screen](https://github.com/Saadxf/Project-3/assets/123157306/7146677a-dbaa-4910-b97c-2250d59ca5e5)
+- Scrollable list of plants.
+- Filtering: Users can filter plants by type.
+- Favorites: Add plants to favorites with a tap.
+- Buying: Select plants for purchase.
 
-2. **JSON Data Handling:**
-    - Retrieve plant data from a JSON file.
-    - Create models to represent plant objects and map JSON data to Dart objects.
-    - Display plant information including images, names, prices, and descriptions, etc.
+### Favorite Screen
+![Favorite Screen](https://github.com/Saadxf/Project-3/assets/123157306/a8835fe8-9a59-46ec-abaa-0f9b641fff81)
+- Display: List of plants marked as favorites.
+- Functionality: Saves user-selected favorite plants for quick access.
+- Storage: Favorites are saved locally or in the user's account for retrieval.
 
-3. **Package Integration:**
-    - Utilize 2-3 animation packages or related Flutter libraries for enhanced user experience.
-    - Use shared_preferences or get_storage packages for local data persistence.
-    - Implement dependency injection with the Get_it package.
+### Cart Screen
+![Cart Screen](https://github.com/Saadxf/Project-3/assets/123157306/683c9009-bf6f-40dc-a82e-56212a1f2628)
+- Display: Shows the plants selected by the user for purchase.
+- Content: Includes plant name, quantity, individual price, and total price.
+- Functionality:
+  - Allows users to increment the quantity of each item.
+  - Provides an option to save the cart for later.
+  - Calculates and displays the total price of all items in the cart.
+  - Enables users to remove items from the cart if needed.
+- Storage: Cart items and quantities are saved locally or in the user's account for later retrieval.
 
-4. **CRUD Functionality:**
-    - Allow users to add plants to favorites or saved list, update quantities in the shopping cart, view plant details, and manage the cart items (Deleting or saved plant for later).
-    - Ensure seamless CRUD operations reflecting changes in UI and data models.
+### Product Details Screen
+![Product Details Screen](https://github.com/Saadxf/Project-3/assets/123157306/19b4fca0-20af-4da1-ad68-de898a03e3d5)
 
-5. **Filtering functionality:** 
-    - Add filtering function by allowing the user to display all indoor or outdoor plants.
+### Profile Screen
+![Profile Screen](https://github.com/Saadxf/Project-3/assets/123157306/f85ccee4-6e4b-4dec-8cac-5a0b80e4302c)
 
-## Extra:
-- Add a search function for searching for a specific plant by name.
+## File Structure
+![File Structure](https://github.com/Saadxf/Project-3/assets/123157306/18f9485e-26a1-44ee-869f-48f385ccbf80)
 
-## Submission Guidelines
-
-- Fork the repository and create a new branch with your name (e.g., FirstName-LastName).
-- Implement the project requirements, committing changes frequently.
-- Document code and ensure adherence to clean code principles.
-- Test thoroughly and submit a pull request to the original repository.
-
-## Figma Design
-
-- UI to be implemented: [Figma Design Link](https://www.figma.com/file/87QOskmViPfK8hWnbkz8Ge/Flutter-Plant-Ecommerce-App-UI-(Community)?type=design&node-id=0%3A1&mode=design&t=2bg46IMQ5UXDYLgs-1)
-
-## Deadline
-
-Submit your project by February 18, 2024, at 9:59 am.
-
-## Notes
-
-- Don’t forget to determine the image path for each image in your project in the JSON data file.
-- Be sure to include screenshots of the implemented UIs.
-    - Add and organize the screenshots in your README file in your project.
-- Reach out for assistance if needed.
-- Enjoy the learning process!
-
-Good luck!
+## Libraries & Packages
+- page_transition
+- get_storage
+- get_it
+- card_swiper
