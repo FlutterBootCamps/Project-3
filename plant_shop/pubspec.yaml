@@ -1,0 +1,28 @@
+name: plant_shop
+description: "A new Flutter project."
+publish_to: 'none'
+version: 0.1.0
+
+environment:
+  sdk: '>=3.2.6 <4.0.0'
+
+dependencies:
+  favorite_button: ^0.0.4
+  ffi: ^2.1.0
+  flutter:
+    sdk: flutter
+  get_it: ^7.6.7
+  get_storage: ^2.1.1
+  equatable: ^2.0.5
+  carousel_slider: ^4.2.1
+  customizable_counter: ^1.0.4
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^2.0.0
+
+flutter:
+  assets:
+    - image/
+  uses-material-design: true
