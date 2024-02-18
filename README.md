@@ -1,57 +1,17 @@
-# Flutter Plants E-Commerce App
+# project3_plants_maram
 
-## Overview
+Home Screen
+<img width="300" alt="Screenshot 1445-08-08 at 4 22 32 AM" src="https://github.com/maramnaif/Project-3/assets/123784913/93c177a4-af35-47f9-bcf5-2be61f721ba5">
 
-Welcome to the Flutter Plants E-Commerce project! In this project, you will create a visually appealing user interface for a plants e-commerce application using Flutter. You'll apply various concepts including dealing with JSON data, creating models, retrieving information, using packages, implementing CRUD functionality, and following clean code principles.
+Favorite  Screen
+<img width="307" alt="Screenshot 1445-08-08 at 4 23 18 AM" src="https://github.com/maramnaif/Project-3/assets/123784913/17d48f07-ad3c-4a1a-b590-7e6c4a0c977c">
 
-## Requirements
+Profile  Screen
+<img width="303" alt="Screenshot 1445-08-08 at 4 23 46 AM" src="https://github.com/maramnaif/Project-3/assets/123784913/44fb8d7e-155a-45ef-a531-5ebd44c8a2ae">
 
-1. **UI Implementation:**
-    - Implement the user interface based on the provided Figma design for a plants e-commerce application.
-    - Utilize custom widgets for code reusability and maintainability.
-    - Ensure responsive design across different screen sizes.
+Plant details Screen
+<img width="314" alt="Screenshot 1445-08-08 at 4 24 21 AM" src="https://github.com/maramnaif/Project-3/assets/123784913/e0d92279-da18-4419-9e58-9aadde47e122">
+<img width="315" alt="Screenshot 1445-08-08 at 4 24 40 AM" src="https://github.com/maramnaif/Project-3/assets/123784913/3b74f999-fed8-47c9-8e30-0dad01fa963c">
 
-2. **JSON Data Handling:**
-    - Retrieve plant data from a JSON file.
-    - Create models to represent plant objects and map JSON data to Dart objects.
-    - Display plant information including images, names, prices, and descriptions, etc.
-
-3. **Package Integration:**
-    - Utilize 2-3 animation packages or related Flutter libraries for enhanced user experience.
-    - Use shared_preferences or get_storage packages for local data persistence.
-    - Implement dependency injection with the Get_it package.
-
-4. **CRUD Functionality:**
-    - Allow users to add plants to favorites or saved list, update quantities in the shopping cart, view plant details, and manage the cart items (Deleting or saved plant for later).
-    - Ensure seamless CRUD operations reflecting changes in UI and data models.
-
-5. **Filtering functionality:** 
-    - Add filtering function by allowing the user to display all indoor or outdoor plants.
-
-## Extra:
-- Add a search function for searching for a specific plant by name.
-
-## Submission Guidelines
-
-- Fork the repository and create a new branch with your name (e.g., FirstName-LastName).
-- Implement the project requirements, committing changes frequently.
-- Document code and ensure adherence to clean code principles.
-- Test thoroughly and submit a pull request to the original repository.
-
-## Figma Design
-
-- UI to be implemented: [Figma Design Link](https://www.figma.com/file/87QOskmViPfK8hWnbkz8Ge/Flutter-Plant-Ecommerce-App-UI-(Community)?type=design&node-id=0%3A1&mode=design&t=2bg46IMQ5UXDYLgs-1)
-
-## Deadline
-
-Submit your project by February 18, 2024, at 9:59 am.
-
-## Notes
-
-- Don’t forget to determine the image path for each image in your project in the JSON data file.
-- Be sure to include screenshots of the implemented UIs.
-    - Add and organize the screenshots in your README file in your project.
-- Reach out for assistance if needed.
-- Enjoy the learning process!
-
-Good luck!
+Cart Screen
+<img width="305" alt="Screenshot 1445-08-08 at 4 25 20 AM" src="https://github.com/maramnaif/Project-3/assets/123784913/dfa56299-18e0-48c2-87aa-11f25dc6d3a2">
